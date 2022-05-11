@@ -7,9 +7,10 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class StringDemo {
 	static Logger logger = Logger.getLogger(StringDemo.class);
+
 	public static void main(String[] args) {
-		String str="hello world";
-		String str2=new String("hello world");
+		String str="hello world"; //this will create one object in stack alone
+		String str2=new String("hello world");//this will create two objects
 		
 		char c=str.charAt(0);
 		
@@ -26,7 +27,7 @@ public class StringDemo {
 		int ind=str.indexOf('w');
 		logger.info("The va...:"+ind);
 		
-		logger.info(str==str2);
+		logger.info(str==str2);//== is comparison in java
 		
 		logger.info(str.equals(str2));
 		
@@ -36,8 +37,6 @@ public class StringDemo {
 		logger.info((int)two.charAt(0));
 		logger.info(one.compareTo(two));
 		logger.info(two.compareTo(one));
-		
-		
 		
 	}
 
