@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class SwitchCase {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
 		int daysinMonth=0;
 		String MonthName="Invalid";

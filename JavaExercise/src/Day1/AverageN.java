@@ -4,6 +4,7 @@ public class AverageN {
 	public static void main(String[]args) {
 		int n,num,sum=0,i;
 		
+		@SuppressWarnings("resource")
 		Scanner input=new Scanner(System.in);
 		System.out.print("Enter How Many Numbers");
 		n=input.nextInt();
