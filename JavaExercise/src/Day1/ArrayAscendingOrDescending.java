@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class ArrayAscendingOrDescending {
 
 	public static void main(String[] args) {
-		
 		Scanner sc=new Scanner(System.in);
 		int[]a=new int[5];
 		int i,j,temp;
