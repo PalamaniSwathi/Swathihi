@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CheckGivenNumber {
 
 	public static void main(String[] args) {
-	@SuppressWarnings("resource")
+	
 	Scanner input=new Scanner(System.in);
 	System.out.println("Enter a number maximum 9 digit");
 	int num=input.nextInt();
