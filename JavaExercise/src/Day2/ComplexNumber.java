@@ -30,7 +30,7 @@ class ComplexNumber {
 	System.out.println("\nAddition is :");
 	res.showC();
 	}
-	}
+}
 
 	
 
