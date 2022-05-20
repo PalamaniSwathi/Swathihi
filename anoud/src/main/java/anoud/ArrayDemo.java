@@ -1,5 +1,4 @@
 package anoud;
-
 public class ArrayDemo {
 	public static void main(String[] args) {
 		int []a= {10,20,30,40};
@@ -33,5 +32,4 @@ public class ArrayDemo {
 		int[][] twodarr=new int[rows][columns];
 		System.out.println(twodarr.length);//this will print number of rows
 	}
-
 }

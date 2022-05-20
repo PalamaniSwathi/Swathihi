@@ -9,10 +9,10 @@ public class WapperClass {
 		in=Integer.valueOf(10);
 		in=Integer.parseInt("10");
 		
-		i=in;
-		i=Integer.valueOf(ii);
+		i=in;//auto unboxing
+		i=Integer.valueOf(ii);//manual unboxing
 		
-		in=i;
+		in=i;//auto boxing
 		
 		String arg1=args[3];
 		String arg2=args[2];

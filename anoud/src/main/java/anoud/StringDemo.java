@@ -5,9 +5,11 @@ import java.io.File;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import java.io.File;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 public class StringDemo {
 	static Logger logger = Logger.getLogger(StringDemo.class);
-
 	public static void main(String[] args) {
 		String str="hello world"; //this will create one object in stack alone
 		String str2=new String("hello world");//this will create two objects
@@ -38,6 +40,6 @@ public class StringDemo {
 		logger.info(one.compareTo(two));
 		logger.info(two.compareTo(one));
 		
+		
 	}
-
 }

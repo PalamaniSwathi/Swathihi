@@ -1,5 +1,6 @@
 package anoud;
 import java.util.Scanner;
+
 public class KeyBoardInput {
 	public static void main(String[] args) {
 		Scanner keyin=new Scanner(System.in);
@@ -16,5 +17,4 @@ public class KeyBoardInput {
 		
 		System.out.println("Your age is...:"+age);
 	}
-
 }

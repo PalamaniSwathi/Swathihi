@@ -1,7 +1,7 @@
 package anoud;
 
 public class ArgumentDemo {
-	
+
 	public static void main(String[] args) {
 		String n1=args[0];
 		
@@ -13,6 +13,5 @@ public class ArgumentDemo {
 		
 		System.out.println(args[2]+100);
 	}
-}	
-
+}
 
