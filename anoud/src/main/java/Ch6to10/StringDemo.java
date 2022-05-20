@@ -30,7 +30,7 @@ public class StringDemo {
         System.out.printf("\n%-20s%-20s%-20s","sNo","Name","Company");
         System.out.printf("\n%-20s%-20s%-20s","100","Swathi","Anound Technologies");
         System.out.println();
-        System.out.printf("%f",100.23434343f);
+        System.out.printf("%.3f",100.23434343f);
         
         
 	}
