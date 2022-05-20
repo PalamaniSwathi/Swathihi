@@ -2,12 +2,12 @@ package Ch6to10;
 
 public class StringDemo {
 	public static void main(String[] args) {
-		String str=new String("hello");	//this will create two objects	
-		String str2="hello";//this will create one object
+		String str=new String("hello");	
+		String str2="hello";
 		
-		System.out.println(str==str2);//this will compare the objects not the value
+		System.out.println(str==str2);
 		
-		System.out.println(str.equals(str2));//equals method compares the values...
+		System.out.println(str.equals(str2));
 		
 		if(str.equals(str2)) {
 			System.out.println("both are equal...");
@@ -26,5 +26,12 @@ public class StringDemo {
 		System.out.println(v);
 		
 		System.out.printf("My name is is ..:%s and my age is..:%d and my weight is..:%f","Billa",70,60.5f);
+        System.out.printf("\n%-20s%-20s%-20s", "Column1","Column2","Column3");
+        System.out.printf("\n%-20s%-20s%-20s","sNo","Name","Company");
+        System.out.printf("\n%-20s%-20s%-20s","100","Swathi","Anound Technologies");
+        System.out.println();
+        System.out.printf("%f",100.23434343f);
+        
+        
 	}
 }
