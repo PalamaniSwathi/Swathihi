@@ -4,9 +4,12 @@ public class StringDemo2 {
 
 	public static void main(String[] args) {
 		 String s="Hello World";
+		 String s1="Hi";
 		 System.out.println(s.charAt(1));
 		 System.out.println(s.indexOf('e'));
 		 System.out.println(s.toUpperCase());
+		 System.out.println(s.compareTo(s1));
+		 System.out.println("string length is:"+s.length());
 		 String str=s.toLowerCase();
 		 System.out.println(str);
 		 char c[]=s.toCharArray();
