@@ -5,12 +5,19 @@ public class StringDemo2 {
 	public static void main(String[] args) {
 		 String s="Hello World";
 		 String s1="Hi";
+		 System.out.println(s1.contains("hi"));
+		 System.out.println(s1.contains("Hi"));
 		 System.out.println(s.charAt(1));
 		 System.out.println(s.indexOf('e'));
 		 System.out.println(s.toUpperCase());
 		 System.out.println(s.compareTo(s1));
 		 System.out.println("string length is:"+s.length());
 		 String str=s.toLowerCase();
+		 s1=s1.concat("Every one");
+		 System.out.println(s.endsWith("d"));
+		 System.out.println(s.endsWith("world"));
+		 System.out.println(s.endsWith("World"));
+		 System.out.println(s1);
 		 System.out.println(str);
 		 char c[]=s.toCharArray();
 		 for(char cc:c) {
