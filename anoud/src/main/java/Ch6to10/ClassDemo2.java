@@ -3,7 +3,7 @@ package Ch6to10;
 public class ClassDemo2 {
 
 	public static void main(String[] args) {
-		Test obj=new Test();//this is how we create a objet of a class
+		Test obj=new Test();//this is how we create a object of a class
 		obj.met();
 		obj.met2();
 	}
