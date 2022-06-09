@@ -17,7 +17,7 @@ abstract class ConsMed extends ConsTop{
 }
 class ConsBot extends ConsMed{
 	public ConsBot(String s) {
-		super(100);//super call to constructor should be the first time
+		super(100);//super call to constructor should be the first line
 		System.out.println("bottom cons object created....");
 		
 	}
