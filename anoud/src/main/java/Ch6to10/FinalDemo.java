@@ -20,3 +20,4 @@ final class FinCla{
 //class SubFinCla extends FinCla{
 	//void met(){
 	//}
+//}
