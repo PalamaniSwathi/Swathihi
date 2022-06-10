@@ -4,12 +4,12 @@ public class ThrowThrowsDemo2 {
 	
 		public static void main(String[] args)throws Exception{
 			YesBank yb=new YesBank();
-			//try{
-			yb.withDraw(1000000);
-			//}catch(Exception e){
+			//try {
+			//yb.withDraw(1000000);
+		//}catch(Exception e) {
 			//System.out.println(e);
-		    //}
-			System.out.println("business continues...");
+		//}
+		System.out.println("business continues...");
 		}
 		}
 		class YesBank{
