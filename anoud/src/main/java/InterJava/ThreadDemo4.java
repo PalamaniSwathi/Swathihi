@@ -29,9 +29,9 @@ class Toilet{
 	public void useToilet() {
 		Thread t=Thread.currentThread();
 		String name=t.getName();
-		System.out.println(name + "is using the toilet...");
+		System.out.println(name+ "is using the toilet...");
 		try {Thread.sleep(5000);}catch(Exception e) {}
-		System.out.println(name + "came out of toilet...");
+		System.out.println(name+ "came out of toilet...");
 		
 	}
 }
