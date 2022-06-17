@@ -20,7 +20,6 @@ public static void main(String[] args) {
 	System.out.println(hs.isEmpty());
 	System.out.println(hs.contains("ba"));
 	
-	//hs.forEach(System.out::println);
 	//hs.forEach(new MyConsumer());
 	//hs.forEach((s)->{System.out.println(s);});
 	hs.forEach(ColDemo2::print);
