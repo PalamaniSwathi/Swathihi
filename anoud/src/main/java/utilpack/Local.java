@@ -21,7 +21,7 @@ public class Local {
 	        System.out.println("starting time:"+lt);
 	        while(time>0){
 	            String week = String.valueOf(ld.getDayOfWeek());
-	            if(week.equals("SUNDay")){
+	            if(week.equals("SUNDAY")){
 	                ld = ld.plusDays(1);
 	            }
 	            else if(week.equals("SATURDAY")) {
