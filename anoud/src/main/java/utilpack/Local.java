@@ -33,11 +33,7 @@ class Local{
         
         ZonedDateTime Zdt=ZonedDateTime.of(ldt, ZoneId.of("Asia/Calcutta"));
         System.out.println(Zdt);
-       
-        Cab.DaysRequired(time,Zdt);
-        
-        
-        
+        Cab.DaysRequired(time,Zdt);        
        
     }
 }
