@@ -1,7 +1,6 @@
 package utilpack;
 
 import java.util.Scanner;
-import java.util.TimeZone;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -13,24 +12,33 @@ class Local{
         double speed,distance,time;
         int count =0;
         Scanner sc=new Scanner(System.in);
+        
         System.out.println("enter speed in kmph");
         speed = sc.nextDouble();
+        
         System.out.println("enter distance in km");
         distance = sc.nextDouble();
+        
         time = distance / speed ;
         System.out.println("time taken in hrs is :"+time);
+        
         LocalDate ld = LocalDate.now();
         System.out.println("starting date:"+ld);
+        
         LocalTime lt = LocalTime.now();
         System.out.println("Staring time:"+lt);
+        
         LocalDateTime ldt=LocalDateTime.of(ld, lt);
         ZonedDateTime Zdt=ZonedDateTime.of(ldt, ZoneId.of("Asia/Calcutta"));
         System.out.println(Zdt);
+        
         RequiredDays Cab = new RequiredDays();
         Cab.DaysRequired(time,Zdt);
+       
     }
 }
-class RequiredDays{
+
+  class RequiredDays{
     int count = 0;
     public void DaysRequired(double time,ZonedDateTime Zdt)
     {
