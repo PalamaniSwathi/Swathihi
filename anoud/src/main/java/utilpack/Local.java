@@ -47,8 +47,8 @@ class Local{
             
             int    month = Zdt.getMonthValue();
             int    date  = Zdt.getDayOfMonth();
-            int    year  = Zdt.getYear();
-            if((week.equals("SUNDAY"))||(month==1 && (date==26 || date==1)||(month==8 && date==15)||(year%4==0 && month==02))){
+            
+            if((week.equals("SUNDAY"))||(month==1 && (date==26 || date==1)||(month==8 && date==15))){
                 Zdt = Zdt.plusDays(1);
             }
             else if(week.equals("SATURDAY")){
@@ -56,6 +56,7 @@ class Local{
                count=count+1;
                time=time-4;
             }
+            
             else{
                Zdt = Zdt.plusDays(1);
                count=count+1;
