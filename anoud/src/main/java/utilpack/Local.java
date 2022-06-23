@@ -33,7 +33,7 @@ class Local{
         
         ZonedDateTime Zdt=ZonedDateTime.of(ldt, ZoneId.of("Asia/Calcutta"));
         System.out.println(Zdt);
-        Cab.DaysRequired(time,Zdt);        
+        Cab.DaysRequired(time,Zdt);      
        
     }
 }
@@ -44,7 +44,11 @@ class Local{
     {
           while(time>0){
             String week = String.valueOf(Zdt.getDayOfWeek());
-            if(week.equals("SUNDAY")){
+            
+            int    month = Zdt.getMonthValue();
+            int    date  = Zdt.getDayOfMonth();
+            int    year  = Zdt.getYear();
+            if((week.equals("SUNDAY"))||(month==1 && (date==26 || date==1)||(month==8 && date==15)||(year%4==0 && month==02))){
                 Zdt = Zdt.plusDays(1);
             }
             else if(week.equals("SATURDAY")){
