@@ -41,31 +41,39 @@ class Local{
  abstract class RequiredDays{
     int count = 0;
     public void DaysRequired(double time,ZonedDateTime Zdt)
-    {
-          while(time>0){
-            String week = String.valueOf(Zdt.getDayOfWeek());
-            
-            int    month = Zdt.getMonthValue();
-            int    date  = Zdt.getDayOfMonth();
-            
-            if((week.equals("SUNDAY"))||(month==1 && (date==26 || date==1)||(month==8 && date==15))){
-                Zdt = Zdt.plusDays(1);
-            }
-            else if(week.equals("SATURDAY")){
-               Zdt = Zdt.plusDays(1);
-               count=count+1;
-               time=time-4;
-            }
-            
-            else{
-               Zdt = Zdt.plusDays(1);
-               count=count+1;
-               time=time-12;
-            }
+    { 
+    	while(time>0){
+        String week  = String.valueOf(Zdt.getDayOfWeek());
+        int    month = Zdt.getMonthValue();
+        int    date  = Zdt.getDayOfMonth();
+        int    year  = Zdt.getYear();
+        
+        if(year%4==0 && (month==02 && date ==29)){
+            Zdt = Zdt.plusDays(1);
+           count=count+1;
+           time=time-12;
         }
-        System.out.println("No.of days required to reach destination is :"+count+" days");
-        System.out.println("Reach destination on :"+Zdt);
+       
+        else if((week.equals("SUNDAY"))||(month==1 && date==26)||(month==8 && date==15)){
+
+            Zdt = Zdt.plusDays(1);
+        }
+        
+        else if(week.equals("SATURDAY")){
+           Zdt = Zdt.plusDays(1);
+           count=count+1;
+           time=time-4;
+        }
+        
+        else{
+           Zdt = Zdt.plusDays(1);
+           count=count+1;
+           time=time-12;
+        }
     }
+    System.out.println("No.of days required to reach destination is :"+count+" days");
+    System.out.println("Reach destination on :"+Zdt);
+}
 }
   class TotalTime extends RequiredDays{
 	  public double TimeRequired(double speed,double distance) {
