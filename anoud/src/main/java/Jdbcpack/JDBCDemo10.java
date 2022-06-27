@@ -17,7 +17,7 @@ public class JDBCDemo10 {
 		String sql="{call proc3(?,?)}";
 		
 		CallableStatement cs=con.prepareCall(sql);
-		cs.setString(1, "ramu");
+		cs.setString(1, "rani");
 		cs.registerOutParameter(2, Types.INTEGER);
 		
 		cs.execute();

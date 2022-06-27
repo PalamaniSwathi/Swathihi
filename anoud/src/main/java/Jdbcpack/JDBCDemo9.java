@@ -17,7 +17,7 @@ public class JDBCDemo9 {
 		String sql="{call proc2(?,?)}";
 		
 		CallableStatement cs=con.prepareCall(sql);
-		cs.setString(1, "ton");
+		cs.setString(1, "ram");
 		cs.setInt(2, 1);
 		
 		int noofchanges=cs.executeUpdate();

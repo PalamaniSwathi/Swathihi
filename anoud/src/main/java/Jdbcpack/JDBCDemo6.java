@@ -21,7 +21,7 @@ public class JDBCDemo6 {
 		String sql="select * from users where uname=?";
 		PreparedStatement stmt=con.prepareStatement(sql);
 		
-		stmt.setString(1, "mohan");
+		stmt.setString(1, "rani");
 		ResultSet rs=stmt.executeQuery();
 		
 		
