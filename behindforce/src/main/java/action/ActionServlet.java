@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebInitParam;
@@ -31,7 +32,8 @@ public class ActionServlet extends HttpServlet {
 		String mydrivervalue=confing.getInitParameter("drvier");
 		System.out.println(mydrivervalue);
 		System.out.println(confing.getInitParameter("url"));
-
+		ServletContext application=confing.getServletContext();
+		application.setAttribute("myglobal","sun.....");
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
