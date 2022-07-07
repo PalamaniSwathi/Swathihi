@@ -23,8 +23,9 @@ public class SecondServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
-       ServletContext app=getServletContext();
-       System.out.println("From Second Servlet...:"+app.getAttribute("myglobal"));
+ServletContext app=config.getServletContext();
+		
+		System.out.println("From Second Servlet...:"+app.getAttribute("myglobal"));
 		try {
 		String path=app.getRealPath("/WEB-INF/config.properties");
 		Properties prop=new Properties();
@@ -33,6 +34,7 @@ public class SecondServlet extends HttpServlet {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(app.getRealPath("root"));
 	}
 	
     public SecondServlet() {

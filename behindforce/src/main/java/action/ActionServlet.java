@@ -28,8 +28,8 @@ import javax.servlet.http.HttpServletResponse;
 public class ActionServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig confing) throws ServletException {
-		System.out.println("Init called...");
-		String mydrivervalue=confing.getInitParameter("drvier");
+		System.out.println("init called.....");
+		String mydrivervalue=confing.getInitParameter("driver");
 		System.out.println(mydrivervalue);
 		System.out.println(confing.getInitParameter("url"));
 		ServletContext application=confing.getServletContext();
