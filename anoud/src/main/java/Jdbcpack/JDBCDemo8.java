@@ -6,14 +6,14 @@ import java.sql.Types;
 
 public class JDBCDemo8 {
 	public static void main(String[] args) throws Exception{
-		//Step1 - Load the Driver.
+		
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		//Step 2 - Establish Connection
+		
 		Connection con=DriverManager.getConnection
 				("jdbc:mysql://localhost:3306/anound","root","root");
 		
 		System.out.println(con);
-		//Step 3 - Execute sql statement
+		
 		
 		String sql="{call proc1(?)}";
 		
@@ -21,7 +21,7 @@ public class JDBCDemo8 {
 		cs.registerOutParameter(1, Types.INTEGER);
 		
 		cs.execute();
-		//step 4 - process result
+		
 		int countofcolumns=cs.getInt(1);
 		System.out.println("No of columns..:"+countofcolumns);
 		
