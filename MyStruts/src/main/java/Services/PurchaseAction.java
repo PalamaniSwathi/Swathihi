@@ -10,18 +10,19 @@ public class PurchaseAction extends Action{
 		Enumeration em=request.getParameterNames();
 		
 		HttpSession hs=request.getSession();
+		String next=request.getParameter("shop");
 		
 		while(em.hasMoreElements()) {
 			
-			String a=em.nextElement().toString();
+			String name=em.nextElement().toString();
 			
-			String b=request.getParameter(a);
+			String value=request.getParameter(name);
 			
-			hs.setAttribute(a,b);
+			hs.setAttribute(name,value);
 			
 		}
 		
-		return "Completed";
+		return "fruitshop.sucess";
 		
 	}
 }

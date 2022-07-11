@@ -13,6 +13,7 @@
 <h1>Welcome To Super Market.........</h1>
 <hr>
 <jsp:include page="fruitshop.jsp" />
+
 <hr>
 </body>
 </html>
