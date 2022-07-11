@@ -47,4 +47,5 @@ public class Example4 extends HttpServlet {
 			out.println("<h2> BYE </h2>");
 			}
 	}
+
 }
