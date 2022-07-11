@@ -7,10 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body><center>
+<hr>
+<jsp:include page="logout.jsp" />
 <h1>Fruit Shop</h1>
 <form action="purchase.do" method="post">
 <input type="hidden" name="action" value="purchase">
-<input type="hidden" name="shop" value="fruitshop">
+<input type="hidden" name="shop" value="shop2">
 <input type="radio" name="apple" value="rs50">Apple
 <input type="radio" name="mango" value="rs30">Mango
 <input type="radio" name="banana" value="rs20">Banana

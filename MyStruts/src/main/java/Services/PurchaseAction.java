@@ -22,7 +22,7 @@ public class PurchaseAction extends Action{
 			
 		}
 		
-		return "fruitshop.sucess";
+		return next;
 		
 	}
 }
