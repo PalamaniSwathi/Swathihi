@@ -14,9 +14,9 @@
 <form action="purchase.do" method="post">
 <input type="hidden" name="action" value="purchase">
 <input type="hidden" name="shop" value="shop4">
-<input type="checkbox" name="sprite" value="rs50">Sprite
-<input type="checkbox" name="Thumsup" value="rs70">Thums up
-<input type="checkbox" name="Maaza" value="rs40">Maaza
+<input type="checkbox" name="sprite" value="rs150">Sprite
+<input type="checkbox" name="Thumsup" value="rs170">Thums up
+<input type="checkbox" name="Maaza" value="rs140">Maaza
 <input type="submit" value="Next">
 </form>
 </center>
