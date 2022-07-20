@@ -1,5 +1,4 @@
 package Exam;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -17,8 +16,8 @@ public class BlobandClob {
 	public static void main(String args[]) throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/anound", "root", "root");
-		System.out.println(con);
-		String query = "insert into image(name, article, image) VALUES (?, ?, ?)";
+		System.out.println("connection established...");
+		String query = "insert into images(name, article, image) values (?, ?, ?)";
 		PreparedStatement pstmt = con.prepareStatement(query);
 		pstmt.setString(1, "Nani");
 		FileReader fileReader = new FileReader("C:/output/text1.txt");
@@ -28,36 +27,50 @@ public class BlobandClob {
 		pstmt.execute();
 		System.out.println("Record inserted......");
 		// Retrieving the results
-		Statement stmt = con.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT * from articles_data");
-		while (rs.next()) {
-			String name = rs.getString("name");
-			Clob clob = rs.getClob("article");
-			Blob blob = rs.getBlob("image");
-			System.out.println("Name: " + name);
-			System.out.println("Clob value: " + clob);
-			System.out.println("Blob value: " + blob);
-			System.out.println("");
-			System.out.print("Clob data is stored at: ");
-			// Storing clob to a file
-			int i, j = 0;
-			Reader r = clob.getCharacterStream();
-			String filePath = "C:/output/" + name + "text1.txt";
-			FileWriter writer = new FileWriter(filePath);
-			while ((i = r.read()) != -1) {
-				writer.write(i);
-			}
-			writer.close();
-			System.out.println(filePath);
-			j++;
-			System.out.print("Blob data is stored at: ");
-			InputStream is = blob.getBinaryStream();
-			byte byteArray[] = new byte[is.available()];
-			is.read(byteArray);
-			filePath = "C:/output/" + name + "pic1.jpg";
-			FileOutputStream outPutStream = new FileOutputStream(filePath);
-			outPutStream.write(byteArray);
-			System.out.println(filePath);
-		}
+				Statement stmt = con.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * from images");
+				while (rs.next()) {
+					String name = rs.getString("name");
+					Clob clob = rs.getClob("article");
+					Blob blob = rs.getBlob("image");
+					System.out.println("Name: " + name);
+					System.out.println("Clob value: " + clob);
+					System.out.println("Blob value: " + blob);
+					System.out.println("");
+					System.out.print("Clob data is stored at: ");
+					// Storing clob to a file
+					int i, j = 0;
+					Reader r = clob.getCharacterStream();
+					String filePath = "C:/output/" + name + "text2.txt";
+					FileWriter writer = new FileWriter(filePath);
+					while ((i = r.read()) != -1) {
+						writer.write(i);
+					}
+					writer.close();
+					System.out.println(filePath);
+					j++;
+					System.out.print("Blob data is stored at: ");
+					InputStream is = blob.getBinaryStream();
+					byte byteArray[] = new byte[is.available()];
+					is.read(byteArray);
+					filePath = "C:/output/" + name + "pic2.jpg";
+					FileOutputStream outPutStream = new FileOutputStream(filePath);
+					outPutStream.write(byteArray);
+					System.out.println(filePath);				}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
