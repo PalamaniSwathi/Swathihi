@@ -15,23 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(
-		urlPatterns = "*.do",
-		initParams = {
-				@WebInitParam(name="driver",value="my sql driver...."),
-				@WebInitParam(name="url",value="my sql driver urlllllll....")
-				}
-	)
+@WebServlet( "*.do")
 public class JDBCStoredProcedure extends HttpServlet {
 	@Override
-	public void init(ServletConfig confing) throws ServletException {
-		System.out.println("init called.....");
-		String mydrivervalue=confing.getInitParameter("driver");
-		System.out.println(mydrivervalue);
-		System.out.println(confing.getInitParameter("url"));
-		ServletContext application=confing.getServletContext();
-		application.setAttribute("myglobal","sun.....");
-	}
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 		
@@ -45,7 +32,7 @@ public class JDBCStoredProcedure extends HttpServlet {
 		}
 		else {
 			
-			RequestDispatcher rd=request.getRequestDispatcher("error.html");
+			RequestDispatcher rd=request.getRequestDispatcher("error.jsp");
 			rd.forward(request, response);
 		}
 		System.out.println("service method called..");
@@ -53,10 +40,6 @@ public class JDBCStoredProcedure extends HttpServlet {
 	   
 
 }
-	@Override
-	public void destroy() {
-        System.out.println("destroy called...");
- 
-	}
+	
 	}
 
