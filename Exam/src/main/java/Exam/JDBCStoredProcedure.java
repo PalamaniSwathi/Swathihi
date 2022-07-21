@@ -2,13 +2,14 @@ package Exam;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
+
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.annotation.WebInitParam;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,10 +37,32 @@ public class JDBCStoredProcedure extends HttpServlet {
 			rd.forward(request, response);
 		}
 		System.out.println("service method called..");
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			Connection con=DriverManager.getConnection
+					("jdbc:mysql://localhost:3306/anound","root","root");
+
+			System.out.println(con);
+			
+			
+			String sql="select * from users";
+			Statement stmt=con.createStatement();
+			boolean result=stmt.execute(sql);
+		
+			
+			System.out.println(result);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+		
 		
 	   
 
-}
+		}
 	
-	}
+
+	
+	
 
