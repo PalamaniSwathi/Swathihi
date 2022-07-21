@@ -56,7 +56,9 @@ public class BlobandClob {
 					filePath = "C:/output/" + name + "pic2.jpg";
 					FileOutputStream outPutStream = new FileOutputStream(filePath);
 					outPutStream.write(byteArray);
-					System.out.println(filePath);				}
+					System.out.println(filePath);		
+				
+				}
 	}
 }
 
