@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class JDBC {
 	public static void main(String[] args) {
-		InsertUser();
+		insertUser();
 		retriveUserById();
 		updateUserUidbyflag();
 		deleteUserById();
@@ -21,7 +21,7 @@ public class JDBC {
 			e.printStackTrace();
 		}
 	}
-	private static void InsertUser(){
+	private static void insertUser(){
 		try {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/anound","root","root");
 			String sql="insert into users(uid,uname,upass,amt,city,flag)"+"values(1,'Ravi','spider',3000,'Nellore',0)";

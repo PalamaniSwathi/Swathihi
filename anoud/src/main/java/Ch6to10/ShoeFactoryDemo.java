@@ -32,7 +32,7 @@ class LeatherShoe extends Shoe{
 }
 class Customer{
 	String name;
-	public Customer(String name) {
+	public Customer(String name) {	
 		this.name=name;
 	}
 }
