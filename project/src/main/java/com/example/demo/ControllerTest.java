@@ -39,8 +39,15 @@ public class ControllerTest {
 		return mandv;
 	}
 	@RequestMapping(method=RequestMethod.POST,value="/register")
-	public ModelAndView processForm(@Valid@ModelAttribute("userObj") User1 us,BindingResult rs,HttpServletRequest request) {
+	public ModelAndView processForm(@Valid @ModelAttribute("userObj") User1 us,BindingResult rs,HttpServletRequest request) {
 		ModelAndView mandv=new ModelAndView();
+		if(rs.hasErrors()) {
+			
+				mandv.setViewName("register");
+				return mandv;
+			}
+			
+		
 		
 		
 		System.out.println("Username...:"+us.getUname());
@@ -66,10 +73,11 @@ else {
 	mandv.setViewName("error");
 	
 	return mandv;
-	
+
 }
 
 }
+
 @RequestMapping(method=RequestMethod.GET,value="/register1")
 public ModelAndView websearch1() {
 	ModelAndView mandv=new ModelAndView();
