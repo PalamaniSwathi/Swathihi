@@ -2,7 +2,7 @@
 <form:form action="/sc/shop" method="POST"><center>
 <style>
 body{
-background-image:url("https://thumbs.dreamstime.com/z/energy-drinks-sale-grocery-store-139866215.jpg");
+background-image:url("https://thumbs.dreamstime.com/b/bottles-assorted-global-soft-drinks-poznan-poland-jan-drink-market-dominated-brands-few-multinational-companies-founded-84848646.jpg");
 background-repeat:no-repeat;
 background-size:cover;
 }</style>
