@@ -35,9 +35,16 @@ public class ShopController {
 		List<Shopping> c = services.checkUser(name, pass);
 		Iterator<Shopping> itr = c.iterator();
 		while (itr.hasNext()) {
-			mv.setViewName("welcome");
-			return mv;
+			if (itr.next().getFlag() == 0) {
+				mv.setViewName("welcome");
+				services.updateFlag(1, name, pass);
+				return mv;
+			} else {
+				mv.setViewName("logout");
+				return mv;
+			}
 		}
+		
 		mv.setViewName("error");
 		return mv;
 	}
@@ -56,5 +63,6 @@ public class ShopController {
 		
 		
 	}
+	
 
 }

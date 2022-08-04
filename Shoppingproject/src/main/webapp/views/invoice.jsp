@@ -10,6 +10,7 @@ background-image:url("https://www.scienceabc.com/wp-content/uploads/2016/05/shop
 background-repeat:no-repeat;
 background-size:cover;
 }</style>
+<jsp:include page="logout.jsp" />
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>

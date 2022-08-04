@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.Iterator;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -35,5 +36,13 @@ public List<Shopping> checkUser(String name,String pass){
 		
 		return getSdao().checkUID(sh);
 		
+	}
+
+	public void updateFlag(int a, String name, String pass) {
+		List<Shopping> c = getSdao().CheckUser(name, pass);
+		Iterator<Shopping> itr = c.iterator();
+		Shopping sh = itr.next();
+		sh.setFlag(a);
+		getSdao().save(sh);
 	}
 }

@@ -1,19 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Login Form</title>
-</head>
-<body bgcolor="red">
-<center>
-<form action="login.do" method="post">
-<input name="action" value="login" type="hidden">
-<input placeholder="Enter User Name" name="uname" type="text"><br>
-<input placeholder="Enter Password" name="upass" type="password"><br>
-<input type="submit" value="Login..">
+<h1>Re-Login</h1>
+<form action="/sc/forms1" method="GET">
+<input type="submit" value="logout">
 </form>
-</center>
-</body>
-</html>

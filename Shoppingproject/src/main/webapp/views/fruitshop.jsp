@@ -12,5 +12,6 @@ background-size:cover;
   <input type="radio" name="apple" value="rs50">Apple
 <input type="radio" name="mango" value="rs30">Mango
 <input type="radio" name="orange" value="rs20">Orange
-<input type="submit" value="Next Shop...."></center>
+<input type="submit" value="Next Shop....">
+</center>
 </form:form>
