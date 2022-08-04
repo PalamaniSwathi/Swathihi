@@ -42,4 +42,3 @@ public List<User1> checkUser(String name,String pass){
 	}
 }
 
-

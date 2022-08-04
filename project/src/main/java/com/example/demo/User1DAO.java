@@ -15,4 +15,3 @@ public interface User1DAO extends JpaRepository<User1, Integer> {
 	public List<User1> checkUID(User1 us);
 	}
 	
-
