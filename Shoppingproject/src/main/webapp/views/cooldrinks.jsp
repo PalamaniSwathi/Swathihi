@@ -4,7 +4,7 @@
 <center>
 <style>
 body{
-background-image:url("https://thumbs.dreamstime.com/b/bottles-assorted-global-soft-drinks-poznan-poland-jan-drink-market-dominated-brands-few-multinational-companies-founded-84848646.jpg");
+background-image:url("https://wallpaperaccess.com/full/513584.jpg");
 background-repeat:no-repeat;
 background-size:cover;
 }</style>

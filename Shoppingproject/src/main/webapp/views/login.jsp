@@ -6,8 +6,8 @@ background-image:url("https://images.freecreatives.com/wp-content/uploads/2016/0
 <h1>Welcome Login</h1>
 <form:form action="/sc/forms1" method="POST">
 
-	Name:<input type="text" name="name" required="required"><br>
-	Password:<input type="password" name="pass" required="required"><br>
+	Name:<input type="text" name="name" required="required"><br><br>
+	Password:<input type="password" name="pass" required="required"><br><br>
 	<input type="submit" value="click...">
 	
 </form:form>

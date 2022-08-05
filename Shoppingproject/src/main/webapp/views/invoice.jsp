@@ -11,6 +11,8 @@ background-repeat:no-repeat;
 background-size:cover;
 }</style>
 <jsp:include page="logout.jsp" />
+<center>
+<h1>Items</h1>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
@@ -27,7 +29,7 @@ while(em.hasMoreElements()){
 	out.println("<h1>"+a+":"+b+"<h1>");
 	}
 }
-%>
+%></center>
 </body>
 </html>
 
