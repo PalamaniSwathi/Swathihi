@@ -1,5 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<form:form action="/form/register" method="POST" modelAttribute="userObj">
+<form:form action="/sc/register" method="POST" modelAttribute="userObj">
 	UserId:<form:input path="uid"/><br>
 	UserName:<form:input path="uname"/><br>
 	<form:errors path="uname"></form:errors><br>

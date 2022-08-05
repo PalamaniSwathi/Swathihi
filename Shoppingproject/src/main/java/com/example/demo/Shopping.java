@@ -2,10 +2,12 @@ package com.example.demo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 @Entity
 public class Shopping {
 @Id
 private int id;
+@Size(min=3,max=15)
 private String name;
 private String pass;
 private String city;
@@ -30,7 +32,6 @@ public String getPass() {
 public void setPass(String pass) {
 	this.pass = pass;
 }
-
 public String getCity() {
 	return city;
 }
@@ -43,8 +44,6 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
-
-
 public int getFlag() {
 	return flag;
 }
