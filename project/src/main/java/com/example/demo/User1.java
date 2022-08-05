@@ -16,7 +16,7 @@ public class User1 {
 	private String city;
 	private String address;
 	private int flag;
-	private long phonenumber;
+	private String phonenumber;
 	public int getUid() {
 		return uid;
 	}
@@ -60,10 +60,10 @@ public class User1 {
 	public void setFlag(int flag) {
 		this.flag = flag;
 	}
-	public long getPhonenumber() {
+	public String getPhonenumber() {
 		return phonenumber;
 	}
-	public void setPhonenumber(long phonenumber) {
+	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
 	
