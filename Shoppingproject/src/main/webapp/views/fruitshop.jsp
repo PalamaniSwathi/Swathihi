@@ -1,4 +1,7 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.example.demo.DbCon"%>
+<%@page import="java.io.OutputStream"%>
+
 <center>
 <style>
 body{
@@ -6,12 +9,20 @@ background-image:url("https://images.creativemarket.com/0.1.0/ps/5779879/1820/12
 background-repeat:no-repeat;
 background-size:cover;
 }</style>
-<h1>Fruits Shop</h1></center>
-<form:form action="/sc/shop" method="POST"><center>
+<h1>Fruits Shop</h1>
+<%! ResultSet rs ;
+    DbCon db ;
+    public void jspInit() {
+        db = new DbCon();
+    }
+%>
+<form action="/sc/shop" method="post">
 <input type="hidden" name="shop" value="vegetableshop">
-  <input type="radio" name="apple" value="rs50">Apple
-<input type="radio" name="mango" value="rs30">Mango
-<input type="radio" name="orange" value="rs20">Orange
-<input type="submit" value="Next Shop....">
-</center>
-</form:form>
+<% rs=db.checkTable("fruitshop"); 
+while(rs.next()){ %>
+<input type="checkbox" name=<%=rs.getString(1) %> value=<%=rs.getString(2) %> >
+	<%=rs.getString(1) %>
+	<img alt="Image not found......" src=/sc/shopimg?shopname=fruitshop&name=<%=rs.getString(1) %> width="100px" height="100px">
+	 <% } %>
+    <input type="submit" value="Next">
+</form>

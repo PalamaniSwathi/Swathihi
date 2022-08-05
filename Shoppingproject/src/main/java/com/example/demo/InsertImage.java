@@ -15,8 +15,8 @@ public class InsertImage {
 				System.out.println(con);
 				String qury = "insert into cooldrinks values(?,?,?)";
 				PreparedStatement ps = con.prepareStatement(qury);
-				ps.setString(1, "Maaza");
-				FileInputStream fis = new FileInputStream("C:\\Users\\swathi.palamani\\Downloads\\Maaza.jpg");
+				ps.setString(1, "maaza");
+				FileInputStream fis = new FileInputStream("C:\\Users\\swathi.palamani\\Downloads\\maaza.jpg");
 				ps.setBinaryStream(3, fis, fis.available());
 				ps.setString(2, "50");
 				int a = ps.executeUpdate();
